@@ -561,6 +561,238 @@
         </div>
 
         <div class="card">
+            <h2>💰 AWS Complete Pricing Breakdown</h2>
+            
+            <div class="note">
+                <strong>💡 AWS Per-GB Pricing (Mumbai Region - AWS Calculator Verified):</strong>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>EC2 Instance:</strong> Base compute pricing (as shown in GPU table above)</li>
+                    <li><strong>EBS gp3 Storage:</strong> $0.0912/GB/month (₹7.61/GB/month)</li>
+                    <li><strong>EBS Snapshots:</strong> $0.05/GB/month (₹4.18/GB/month)</li>
+                    <li><strong>Data Transfer Out:</strong> $0.09/GB (₹7.52/GB)</li>
+                    <li><strong>CloudWatch Logs Ingestion:</strong> $0.50/GB (₹41.75/GB)</li>
+                    <li><strong>CloudWatch Logs Storage:</strong> $0.03/GB/month (₹2.51/GB/month)</li>
+                    <li><strong>NAT Gateway:</strong> $0.045/hour + $0.045/GB processed</li>
+                    <li><strong>Application Load Balancer:</strong> $0.0225/hour + $0.008/LCU</li>
+                    <li><strong>S3 Standard Storage:</strong> $0.023/GB/month (₹1.92/GB/month)</li>
+                    <li><strong>S3 PUT Requests:</strong> $0.005/1000 requests</li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;"><strong>Note:</strong> USD to INR conversion @ ₹83.50. Actual costs depend on usage patterns and data volumes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🏢 On-Premises Alternative Setup</h2>
+            
+            <div class="family-description">
+                <h3>💻 Hardware Requirements for Guardian System</h3>
+                <p><strong>Equivalent Performance:</strong> Match AWS GPU instances with on-premises hardware</p>
+                <p><strong>Initial Investment:</strong> Higher upfront costs but potential long-term savings</p>
+                <p><strong>Maintenance:</strong> Requires IT staff, power, cooling, and space</p>
+            </div>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Setup Scale</th>
+                        <th>Hardware Specs</th>
+                        <th>Initial Cost</th>
+                        <th>Monthly OpEx</th>
+                        <th>3-Year Total</th>
+                        <th>AWS Equivalent</th>
+                        <th>AWS 3-Year Cost</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="instance-name">Small (1-2 cameras)</td>
+                        <td>RTX 4060 Ti + i5-13400 + 16GB + Case/PSU</td>
+                        <td class="price-inr">₹1,85,000</td>
+                        <td class="price-inr">₹12,000</td>
+                        <td class="price-inr">₹6,17,000</td>
+                        <td>g6f.xlarge + EBS + Data Transfer</td>
+                        <td class="price-inr">₹8,56,000</td>
+                        <td class="price-usd">+39% AWS</td>
+                    </tr>
+                    <tr>
+                        <td class="instance-name">Medium (5-10 cameras)</td>
+                        <td>RTX 4070 Super + i7-13700 + 32GB + Server Case</td>
+                        <td class="price-inr">₹3,20,000</td>
+                        <td class="price-inr">₹15,000</td>
+                        <td class="price-inr">₹8,60,000</td>
+                        <td>g4dn.2xlarge + EBS + Data Transfer</td>
+                        <td class="price-inr">₹26,14,000</td>
+                        <td class="price-usd">+204% AWS</td>
+                    </tr>
+                    <tr>
+                        <td class="instance-name">Large (20-30 cameras)</td>
+                        <td>RTX 4080 Super + i9-13900K + 64GB + Workstation</td>
+                        <td class="price-inr">₹5,80,000</td>
+                        <td class="price-inr">₹22,000</td>
+                        <td class="price-inr">₹13,72,000</td>
+                        <td>g4dn.4xlarge + EBS + Data Transfer</td>
+                        <td class="price-inr">₹52,28,000</td>
+                        <td class="price-usd">+281% AWS</td>
+                    </tr>
+                    <tr>
+                        <td class="instance-name">Enterprise (50+ cameras)</td>
+                        <td>RTX 4090 x2 + Xeon W-2295 + 128GB + Server</td>
+                        <td class="price-inr">₹12,50,000</td>
+                        <td class="price-inr">₹35,000</td>
+                        <td class="price-inr">₹25,10,000</td>
+                        <td>g4dn.12xlarge + EBS + Data Transfer</td>
+                        <td class="price-inr">₹1,56,84,000</td>
+                        <td class="price-usd">+525% AWS</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="note">
+                <strong>⚠️ On-Premises Considerations:</strong>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Power & Cooling:</strong> ₹8,000-25,000/month electricity + AC costs (Indian rates)</li>
+                    <li><strong>Internet:</strong> ₹3,000-8,000/month for dedicated leased line</li>
+                    <li><strong>Maintenance:</strong> ₹2,000-8,000/month for AMC + spare parts</li>
+                    <li><strong>UPS/Generator:</strong> ₹50,000-2,00,000 for power backup systems</li>
+                    <li><strong>IT Support:</strong> ₹15,000-40,000/month for dedicated technician</li>
+                    <li><strong>Replacement:</strong> Hardware refresh every 3-4 years</li>
+                    <li><strong>Scalability:</strong> Limited by physical space and power</li>
+                    <li><strong>Reliability:</strong> No built-in redundancy or SLA guarantees</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>💰 Initial Cost Breakdown (Indian Market Prices)</h3>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Small Setup</th>
+                            <th>Medium Setup</th>
+                            <th>Large Setup</th>
+                            <th>Enterprise Setup</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="instance-name">GPU</td>
+                            <td>RTX 4060 Ti 16GB<br>₹45,000</td>
+                            <td>RTX 4070 Super 12GB<br>₹58,000</td>
+                            <td>RTX 4080 Super 16GB<br>₹95,000</td>
+                            <td>RTX 4090 x2 24GB each<br>₹3,40,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">CPU</td>
+                            <td>Intel i5-13400F<br>₹18,000</td>
+                            <td>Intel i7-13700F<br>₹32,000</td>
+                            <td>Intel i9-13900K<br>₹48,000</td>
+                            <td>Intel Xeon W-2295<br>₹1,85,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">RAM</td>
+                            <td>16GB DDR4-3200<br>₹4,500</td>
+                            <td>32GB DDR4-3200<br>₹9,000</td>
+                            <td>64GB DDR4-3600<br>₹22,000</td>
+                            <td>128GB DDR4-3200 ECC<br>₹85,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Motherboard</td>
+                            <td>B660 Chipset<br>₹12,000</td>
+                            <td>Z690 Chipset<br>₹18,000</td>
+                            <td>Z790 Chipset<br>₹25,000</td>
+                            <td>W790 Workstation<br>₹65,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Storage</td>
+                            <td>1TB NVMe SSD<br>₹6,500</td>
+                            <td>2TB NVMe SSD<br>₹12,000</td>
+                            <td>4TB NVMe SSD<br>₹28,000</td>
+                            <td>8TB NVMe SSD x2<br>₹1,20,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">PSU</td>
+                            <td>650W 80+ Gold<br>₹8,500</td>
+                            <td>750W 80+ Gold<br>₹12,000</td>
+                            <td>850W 80+ Platinum<br>₹18,000</td>
+                            <td>1600W 80+ Titanium<br>₹45,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Case/Cooling</td>
+                            <td>Mid Tower + Air Cooler<br>₹8,000</td>
+                            <td>Full Tower + AIO Cooler<br>₹15,000</td>
+                            <td>Workstation Case + Custom Loop<br>₹35,000</td>
+                            <td>4U Server Chassis + Liquid Cooling<br>₹85,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Network Card</td>
+                            <td>Onboard Gigabit<br>₹0</td>
+                            <td>PCIe Gigabit Card<br>₹2,500</td>
+                            <td>10Gb Ethernet Card<br>₹15,000</td>
+                            <td>Dual 10Gb + Management<br>₹35,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Assembly & Testing</td>
+                            <td>₹5,000</td>
+                            <td>₹8,000</td>
+                            <td>₹12,000</td>
+                            <td>₹25,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">OS & Software</td>
+                            <td>Ubuntu Server (Free)<br>₹0</td>
+                            <td>Ubuntu Server (Free)<br>₹0</td>
+                            <td>Ubuntu Server (Free)<br>₹0</td>
+                            <td>Ubuntu Server (Free)<br>₹0</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">Warranty Extension</td>
+                            <td>3-Year Extended<br>₹8,000</td>
+                            <td>3-Year Extended<br>₹12,000</td>
+                            <td>3-Year Extended<br>₹18,000</td>
+                            <td>3-Year Enterprise<br>₹45,000</td>
+                        </tr>
+                        <tr>
+                            <td class="instance-name">GST (18%)</td>
+                            <td>₹19,800</td>
+                            <td>₹29,700</td>
+                            <td>₹54,000</td>
+                            <td>₹1,35,000</td>
+                        </tr>
+                        <tr class="family-header">
+                            <td><strong>TOTAL INITIAL COST</strong></td>
+                            <td class="price-inr"><strong>₹1,85,000</strong></td>
+                            <td class="price-inr"><strong>₹3,20,000</strong></td>
+                            <td class="price-inr"><strong>₹5,80,000</strong></td>
+                            <td class="price-inr"><strong>₹12,50,000</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="note">
+                    <strong>💡 Cost Breakdown Notes:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>Prices:</strong> Based on current Indian market rates (Delhi/Mumbai/Bangalore)</li>
+                        <li><strong>GST:</strong> 18% included on all components as per Indian tax structure</li>
+                        <li><strong>Warranty:</strong> Extended warranty recommended for business use</li>
+                        <li><strong>Assembly:</strong> Professional assembly and stress testing included</li>
+                        <li><strong>Scalability:</strong> Enterprise setup supports dual GPU for maximum performance</li>
+                        <li><strong>Performance:</strong> Each setup optimized for specific camera count ranges</li>
+                        <li><strong>Future-Proof:</strong> Hardware selected for 3-4 year operational lifecycle</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="recommendation">
+                <h3>🎯 Decision Matrix</h3>
+                <p><strong>Choose On-Premises If:</strong> Long-term deployment (5+ years), data sovereignty requirements, existing IT infrastructure</p>
+                <p><strong>Choose AWS If:</strong> Rapid scaling needs, global deployment, minimal IT overhead, high availability requirements</p>
+                <p><strong>Hybrid Approach:</strong> On-premises for core processing + AWS for backup/overflow capacity</p>
+            </div>
+        </div>
+
+        <div class="card">
             <h2>📋 Key Insights</h2>
             
             <div class="note">
